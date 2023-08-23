@@ -394,7 +394,7 @@
     width: 90%;
   }
 
-  .food-img{
+  .gallery-img{
     width: 25vw;
     height: 17vw;
     object-fit: cover;
@@ -407,7 +407,7 @@
     transition: all .5s;
   }
 
-  .gallery-link:hover .food-img{
+  .gallery-link:hover .gallery-img{
     box-shadow:
     .8rem .8rem .1rem #e92929,
     1.5rem 1.5rem .1rem #a2e946,
@@ -418,7 +418,7 @@
     opacity: .5;
     transform: scale(1.1);
   }
-  .food-name{
+  .gallery-name{
     position: absolute;
     top: 2.2rem;
     left: 2.2rem;
@@ -432,12 +432,12 @@
     /* when mouse out */ transition: width .35s;
   }
 
-  .gallery-link:hover .food-name{
+  .gallery-link:hover .gallery-name{
     width: 100%;
     transition: width 1.5s .5s;
   }
 
-  .food-description{
+  .gallery-description{
     position: absolute;
     bottom: 5vw;
     left: 2rem;
@@ -455,7 +455,7 @@
 
 
 
-  .gallery-link:hover .food-description{
+  .gallery-link:hover .gallery-description{
     opacity: 1;
     visibility: visible;
     transition: opacity 1s 1s;
@@ -540,6 +540,45 @@
     }
     .section-2{
       height: 100vh;
+    }
+
+    .gallery-link::before{
+      content: "";
+      position: absolute;
+      width: .2rem;
+      top: 1.0vw;
+      left: 80%;
+      height: 0;
+      background-color: #fff;
+      transition: height .5s;
+      z-index: 10;
+    }
+
+    .gallery-link::after{
+      content: "";
+      position: absolute;
+      top: 18%;
+      left: 2rem;
+      width: 0;
+      height: .2rem;
+      background-color: #fff;
+      transition: width .5s;
+    }
+
+    .gallery-description{
+      position: absolute;
+      bottom: 10vw;
+      left: 2rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      max-width: 75%;
+      max-height: 80%;
+      transition: opacity .3s;
     }
   }
   /* End of Responsive */
